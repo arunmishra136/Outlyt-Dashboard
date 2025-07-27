@@ -1,0 +1,168 @@
+/* Header.css */
+
+/* Main header container */
+.header {
+  background-color: white;
+  border-radius: 1rem; /* 16px */
+}
+
+/* Centered container with padding */
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 3.5rem; /* 8px */
+  padding-right: 5.5rem; /* 8px */
+}
+
+/* Main flexbox for alignment */
+.flex-container {
+  display: flex;
+  align-items: center;
+  height: 4rem; /* 64px */
+}
+
+/* Left Section */
+.left-section {
+  flex-shrink: 0;
+}
+
+.left-section-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* 12px */
+}
+
+.avatar {
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
+  border-radius: 9999px; /* full */
+  cursor: pointer;
+}
+
+.sun-icon {
+  width: 1.5rem; /* 24px */
+  height: 1.5rem; /* 24px */
+  color: #4B5563; /* text-gray-600 */
+}
+
+/* Center Section: Search Bar */
+.center-section {
+  flex: 1 1 0%;
+  min-width: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 28rem; /* max-w-md */
+  margin-left: auto;
+  margin-right: auto;
+  display: none; /* hidden by default */
+}
+
+.search-icon-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-left: 0.75rem; /* pl-3 */
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.search-icon {
+  width: 1.25rem; /* h-5 w-5 */
+  height: 1.25rem;
+  color: #9CA3AF; /* text-gray-400 */
+}
+
+.search-input {
+  width: 100%;
+  background-color: #F3F4F6; /* bg-gray-100 */
+  border: 1px solid transparent;
+  border-radius: 0.5rem; /* rounded-lg */
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem;
+  padding-left: 2.5rem; /* pl-10 */
+  padding-right: 1rem; /* pr-4 */
+}
+
+.search-input:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-color: #3b82f6; /* focus:ring-blue-500 */
+  box-shadow: 0 0 0 2px var(--tw-ring-color);
+}
+
+/* Right Section */
+.right-section {
+  flex-shrink: 0;
+}
+
+.right-section-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* space-x-4 */
+}
+
+.nav {
+  display: none; /* hidden by default */
+  align-items: center;
+  gap: 1rem; /* space-x-4 */
+}
+
+.nav-link {
+  padding: 0.5rem; /* p-2 */
+  color: #4B5563; /* text-gray-600 */
+  border-radius: 9999px; /* rounded-full */
+}
+
+.nav-link:hover {
+  background-color: #F3F4F6; /* hover:bg-gray-100 */
+}
+
+.divider {
+  height: 2rem; /* h-8 */
+  width: 1px;
+  background-color: #E5E7EB; /* bg-gray-200 */
+  display: none; /* hidden by default */
+}
+
+.outlyt-link {
+  font-weight: 700;
+  color: #1E293B; /* text-slate-950 */
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 768px) { /* md */
+  .search-wrapper {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) { /* lg */
+  .nav {
+    display: flex;
+  }
+  .divider {
+    display: block;
+  }
+}
+
+/* Profile Popup (keeping Tailwind for simplicity inside component) */
+.profile-popup {
+  position: absolute;
+  top: 3.5rem; /* top-14 */
+  width: 16rem; /* w-64 */
+  background-color: white;
+  border-radius: 1rem; /* rounded-2xl */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 0.75rem; /* p-3 */
+  border: 1px solid #E5E7EB; /* border */
+  z-index: 50;
+}

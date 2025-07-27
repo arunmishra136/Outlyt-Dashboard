@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Home, Users, Briefcase, MessageSquare, Bell, MessageCircle, Search, Sun } from 'lucide-react';
 // Import the new CSS file
-import '../styles/header.css'
+import '../styles/Header.css'
 
 // The Tag and ProfilePopup components still use Tailwind for simplicity,
 // but their parent `Header` component does not.
